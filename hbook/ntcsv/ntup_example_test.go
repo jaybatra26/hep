@@ -2,18 +2,17 @@
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
 
-package ntup_test
+package ntcsv_test
 
 import (
 	"fmt"
 	"log"
-
-	"go-hep.org/x/hep/hbook/ntup/ntcsv"
 )
 
 func ExampleNtuple_scanH2D() {
+
 	nt, err := ntcsv.Open(
-		"testdata/simple-with-header.csv",
+		"ntcsv/testdata/simple-with-header.csv",
 		ntcsv.Comma(';'),
 		ntcsv.Header(),
 		ntcsv.Columns("v1", "v2", "v3"),
